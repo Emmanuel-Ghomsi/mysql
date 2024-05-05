@@ -25,6 +25,8 @@ services:
     environment:
       PMA_HOST: mysql
       PMA_ARBITRARY: 1
+    volumes:
+      - ./custom_php.ini:/usr/local/etc/php/conf.d/custom_php.ini
     ports:
       - ${ADMINER_PORT}:80
     networks:
